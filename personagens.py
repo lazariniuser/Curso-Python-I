@@ -18,4 +18,5 @@ class Personagem:
         
 print('Boas vindas à arena de batalhas!')
 print('='*50)
-nome_jogador = input('Digite o nome do seu personagem: \n')
+mago = Personagem('Mago', 100, 20)
+guerreiro = Personagem('Guerreiro', 150, 15)
