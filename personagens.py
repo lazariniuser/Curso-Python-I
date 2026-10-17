@@ -1,5 +1,5 @@
 from os import system
-import os  
+system('cls')  
 import random
 import time
 class Personagem:
@@ -9,12 +9,15 @@ class Personagem:
         self.dano = dano
     def atacar(self, inimigo):
         while inimigo.energia > 0 and self.energia > 0:
+            
             inimigo.energia -= self.dano
             inimigo.energia = max(inimigo.energia, 0)  # Garantir que a energia não fique negativa
             print(f'{self.nome} atacou {inimigo.nome} causando {self.dano} de dano.')
             print('-'*50)
             time.sleep(1)
             print('-'*50)
+            print('Barra de vida:')
+            print('█' * (inimigo.energia) + ' ' * ((100 - inimigo.energia)) + '_|')
             print(f'{inimigo.nome} agora tem {inimigo.energia} de vida restante.')
 
             if inimigo.energia <= 0:
