@@ -1,6 +1,6 @@
 from os import system
 import os  
-
+import random
 class Personagem:
     def __init__(self, nome, energia, dano):
         self.nome = nome
@@ -18,5 +18,6 @@ class Personagem:
         
 print('Boas vindas à arena de batalhas!')
 print('='*50)
-mago = Personagem('Mago', 100, 20)
-guerreiro = Personagem('Guerreiro', 150, 15)
+
+mago = Personagem('Mago', 100, random.randint(1, 100))
+guerreiro = Personagem('Guerreiro', 150, random.randint(1, 100) )
