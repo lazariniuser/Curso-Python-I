@@ -12,7 +12,9 @@ class Personagem:
             inimigo.energia -= self.dano
             inimigo.energia = max(inimigo.energia, 0)  # Garantir que a energia não fique negativa
             print(f'{self.nome} atacou {inimigo.nome} causando {self.dano} de dano.')
+            print('-'*50)
             time.sleep(1)
+            print('-'*50)
             print(f'{inimigo.nome} agora tem {inimigo.energia} de vida restante.')
 
             if inimigo.energia <= 0:
