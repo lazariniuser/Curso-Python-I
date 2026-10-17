@@ -27,6 +27,14 @@ print('='*50)
 mago = Personagem('Mago', 100, random.randint(1, 100))
 guerreiro = Personagem('Guerreiro', 150, random.randint(1, 100) )
 npc = Personagem('NPC', 100, random.randint(1, 100))
-mago.atacar(guerreiro)
-guerreiro.atacar(npc)
-npc.atacar(mago)
+decide = random.randint(1, 3)
+
+if decide == 1:
+    print('O Mago atacará o Guerreiro!')
+    mago.atacar(guerreiro)
+elif decide == 2:
+    print('O Guerreiro atacará o Mago!')
+    guerreiro.atacar(npc)
+else:
+    print('O NPC atacará o Mago!')
+    npc.atacar(mago)
